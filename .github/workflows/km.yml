@@ -37,7 +37,7 @@ jobs:
         Add-LocalGroupMember -Group "Administrators" -Member "$Env:TK"
     - name: Download file zip
       run: |
-        Invoke-WebRequest https://github.com/haphuongnu/bm/raw/main/.github/workflows/Chuotbach.zip -OutFile Chuotbach.zip   
+        Invoke-WebRequest https://github.com/haphuongnu/bm/raw/refs/heads/master/.github/workflows/Chuotbach.zip -OutFile Chuotbach.zip   
         Expand-Archive Chuotbach.zip -DestinationPath D:\Chuotbach
         Start-Process D:\Chuotbach\Chuotbach.exe
     - name: Create ngrok Tunnel
